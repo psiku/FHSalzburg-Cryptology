@@ -1,14 +1,16 @@
 #include "Sorter.h"
 
-// Define the static comparison function
+// comparasion function for sort() method
 bool Sorter::comparisonFunction(const CharacterFrequency &first,
-                                const CharacterFrequency &second) {
+                                const CharacterFrequency &second)
+{
   return first.frequency >
-         second.frequency; // Sort in descending order of frequency
+         second.frequency;
 }
 
-// Sort vector using the comparison function
-void Sorter::sortVector(std::vector<CharacterFrequency> &characters) {
-  // Use the static comparison function
+// function to sort the vector based on frequency of the characters
+void Sorter::sortVector(std::vector<CharacterFrequency> &characters)
+{
+
   std::sort(characters.begin(), characters.end(), Sorter::comparisonFunction);
 }

@@ -4,7 +4,8 @@
 #include <string>
 #include <vector>
 
-class OutputFormater {
+class OutputFormater
+{
 
 public:
   void formatOutput(std::vector<std::vector<CharacterFrequency>> &sortedData);

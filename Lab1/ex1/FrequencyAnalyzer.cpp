@@ -1,7 +1,10 @@
 #include "FrequencyAnalyzer.h"
 
 std::vector<std::vector<char>>
-FrequencyAnalyzer::splitData(int keyLength, std::vector<char> dataVector) {
+FrequencyAnalyzer::splitData(int keyLength)
+{
+  std::vector<char> dataVector = this->fileLetters;
+
   // create varables
   std::vector<std::vector<char>> positionLetters(keyLength);
 
@@ -9,7 +12,9 @@ FrequencyAnalyzer::splitData(int keyLength, std::vector<char> dataVector) {
 
   int size = dataVector.size();
 
-  for (int i = 0; i < size; i++) {
+  // push variable to correct vector (1 variable goes to the first vector, 2nd to the second vector, etc.)
+  for (int i = 0; i < size; i++)
+  {
     positionLetters[index % keyLength].push_back(dataVector[index]);
     index++;
   }
@@ -18,7 +23,8 @@ FrequencyAnalyzer::splitData(int keyLength, std::vector<char> dataVector) {
 }
 
 std::vector<CharacterFrequency>
-FrequencyAnalyzer::caclulateLetterFrequency(std::vector<char> letterVector) {
+FrequencyAnalyzer::caclulateLetterFrequency(std::vector<char> letterVector)
+{
   // create frequency_map
   std::map<char, int> frequencyMap;
 
@@ -28,12 +34,14 @@ FrequencyAnalyzer::caclulateLetterFrequency(std::vector<char> letterVector) {
   // total size of vector
   float vectorLength = letterVector.size();
 
-  for (auto &character : letterVector) {
+  for (auto &character : letterVector)
+  {
     frequencyMap[character] += 1;
   }
 
   // convert to vector of structure
-  for (auto &pair : frequencyMap) {
+  for (auto &pair : frequencyMap)
+  {
     char letter = pair.first;
 
     // CHATGPT HELP BY PROVIDING STATIC_CAST

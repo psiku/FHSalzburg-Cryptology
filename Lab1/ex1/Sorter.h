@@ -6,9 +6,7 @@
 class Sorter
 {
 public:
-    // Make the comparison function static
-    static bool comparisonFunction(const CharacterFrequency& first, const CharacterFrequency& second);
+    static bool comparisonFunction(const CharacterFrequency &first, const CharacterFrequency &second);
 
-    // Sort function for sorting character frequencies
-    static void sortVector(std::vector<CharacterFrequency>& characters);
+    static void sortVector(std::vector<CharacterFrequency> &characters);
 };
