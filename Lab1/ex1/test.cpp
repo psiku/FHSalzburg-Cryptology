@@ -11,7 +11,7 @@ int main(const int argc, const char *const argv[])
   if (argc < 2)
   {
     std::cerr << "Description: Encrypts the contents of a file" << std::endl;
-    std::cerr << "Usage: " << argv[0] << " <in> <out>" << std::endl;
+    std::cerr << "Usage: " << argv[0] << " <in>" << std::endl;
     std::cerr << "  in: Input file to encrypt" << std::endl;
     return 1;
   }
