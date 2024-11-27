@@ -77,7 +77,7 @@ void generatePartialKey(const std::string &mode, const mpz_class &p, const mpz_c
 }
 
 // sesion key generator
-void generateSessionKey(const std::string &mode, const mpz_class &p, const mpz_class &partialKey, const mpz_class &number)
+void generateSessionKey(const std::string &, const mpz_class &p, const mpz_class &partialKey, const mpz_class &number)
 {
     mpz_class sessionKey;
 

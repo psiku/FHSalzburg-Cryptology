@@ -8,6 +8,10 @@
 #include "EncrypterDecrypter.h"
 #include "FileHandler.h"
 
+// this code works with big numbers, it doesn;t work with small keys
+// I am not entirely sure if i did it correctly, with taking all the words as one string, or should I take every word as a separate number and encrypt it
+// I do not remember what was said during the laboratory, but from what I understood from assigement I took input file as a one "string"
+
 int main(int argc, char *argv[])
 {
     if (argc < 5)
@@ -30,13 +34,13 @@ int main(int argc, char *argv[])
     EncrypterDecrypter encrypterDecrypter;
     FileHandler fileHandler(input_file, output_file);
 
-    // Reading the message from the input file
+    // reading the "number" from the input file
     mpz_class message = fileHandler.readFromFile();
 
-    // Encrypting or decrypting the message using the RSA formula
+    // encrypting / decrypting the message
     mpz_class result = encrypterDecrypter.encryptDecryptMessage(message, exponent, N);
 
-    // Writing the result to the output file
+    // writing the result to the output file
     fileHandler.writeToFile(result);
 
     return 0;
