@@ -1,0 +1,2 @@
+SHA-256 Hash of file (snippet.html):
+598b237fc7414613389caeb9c9ad9e062c5e613d2269e506f04fd03510151f65
